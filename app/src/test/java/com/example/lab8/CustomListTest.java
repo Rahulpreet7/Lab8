@@ -12,5 +12,14 @@ import java.util.ArrayList;
 
 public class CustomListTest {
 
+    private ArrayList<City> citylist = new ArrayList<>();
+
+    @Test
+    public void testAddCity(){
+        CustomList cityList = new CustomList(null, citylist);
+        City city = new City("Edmonton", "AB");
+        cityList.addCity(city);
+        assertEquals(1, cityList.getCount());
+    }
 
 }
