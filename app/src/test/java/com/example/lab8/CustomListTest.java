@@ -43,4 +43,14 @@ public class CustomListTest {
         cityList.deleteCity(city3);
         assertFalse(cityList.hasCity(city3));
     }
+
+    @Test
+    void testcountCities() throws Exception {
+        CustomList cityList = new CustomList(null, citylist);
+        City city5 = new City("Yellowknife", "Northwest Territories");
+        cityList.addCity(city5);
+        assertEquals(2,cityList.countCities());
+        cityList.deleteCity(city5);
+        assertEquals(1,cityList.countCities());
+    }
 }
