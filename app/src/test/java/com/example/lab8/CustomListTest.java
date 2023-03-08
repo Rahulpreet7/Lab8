@@ -33,4 +33,14 @@ public class CustomListTest {
         assertTrue(cityList.hasCity(city1));
         assertFalse(cityList.hasCity(city2));
     }
+
+    @Test
+    void testdeleteCity() throws Exception {
+        CustomList cityList = new CustomList(null, citylist);
+        City city3 = new City("Amritsar","Punjab");
+        cityList.addCity(city3);
+        assertTrue(cityList.hasCity(city3));
+        cityList.deleteCity(city3);
+        assertFalse(cityList.hasCity(city3));
+    }
 }
